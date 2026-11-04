@@ -3,18 +3,17 @@
   "name": "noslop",
   "description": "Claude artifacts anyone understands in 5 seconds.",
   "owner": {
-    "name": "Ruben Hassid (How to AI)",
-    "email": "me@rubenhassid.ai"
+    "name": "bhubbard"
   },
   "plugins": [
     {
       "name": "noslop",
       "source": "./plugins/noslop",
       "description": "Makes or fixes Claude artifacts so anyone understands them in 5 seconds.",
-      "version": "1.5.0",
-      "author": { "name": "Ruben Hassid (How to AI)", "email": "me@rubenhassid.ai" },
-      "homepage": "https://github.com/rubenhassid1/grenade",
-      "repository": "https://github.com/rubenhassid1/grenade",
+      "version": "1.6.0",
+      "author": { "name": "bhubbard" },
+      "homepage": "https://github.com/bhubbard/grenade",
+      "repository": "https://github.com/bhubbard/grenade",
       "license": "MIT",
       "category": "productivity",
       "keywords": ["artifacts", "design", "writing", "slop"]

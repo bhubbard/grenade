@@ -1,0 +1,8 @@
+[package]
+name = "noslop-lint"
+version = "0.1.0"
+edition = "2021"
+description = "Lint an HTML page against the mechanical noslop rules"
+license = "MIT"
+
+[dependencies]

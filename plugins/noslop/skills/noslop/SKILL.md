@@ -186,7 +186,16 @@ Use this when they ask for a website, the web version, or to put the page on Git
 
 1. Check `gh auth status` and `vercel whoami`. If either is signed out, start the sign-in (`gh auth login --web`, `vercel login`) and tell the person which button to click in the browser.
 2. Push the code to a new private GitHub repo.
-3. Deploy it to Vercel. Add a passcode gate: a `middleware.js` at the root (Vercel Routing Middleware) that shows a passcode screen in the same Claude look until the passcode is right, then sets a cookie. Keep the passcode in a Vercel environment variable, never in the code. Send `X-Robots-Tag: noindex` so search engines skip it.
+3. Deploy it to Vercel. The passcode gate below is a soft gate: it keeps casual visitors and search engines out, but it is not real security. For anything confidential (client data, case details, financials), use Vercel Deployment Protection or Cloudflare Access instead, and say so in your last message. Add a passcode gate: a `middleware.js` at the root (Vercel Routing Middleware) that shows a passcode screen in the same Claude look until the passcode is right, then sets a cookie. Keep the passcode in a Vercel environment variable, never in the code. Send `X-Robots-Tag: noindex` so search engines skip it.
 4. Check it from outside: locked without the passcode, open with it.
 
 End with 3 lines: the link, the passcode, the repo. Nothing else.
+
+## 9. Regulated and bilingual pages
+
+Use this when the page is advertising, client-facing legal or medical marketing, or comes in more than one language. Everything above still applies.
+
+- **Required disclosures stay.** If the firm or industry requires a disclaimer, attorney-advertising notice, license number or similar line, keep it in view, in 13px text, on the page. Never cut it as clutter. If you don't know what is required, don't invent it: add one line to your reply asking the owner to confirm the wording.
+- **No unverifiable claims.** No "best", "guaranteed" or result numbers (settlements, win rates, savings) unless the user gave them with a source. Show each such number with where it comes from.
+- **Bilingual pages say the same thing.** Each language carries the same numbers, deadlines, disclosures and ask. Build one page with a language switch, or two pages that link to each other. Write each version natively, not word for word.
+- **Flag it.** End your reply with one line saying the page needs a compliance review before it goes out.
